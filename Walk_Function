@@ -1,0 +1,18 @@
+#Developer Name : Sagar Chougule
+import arcpy
+import os
+workspace = r'D:\TmpGIS\shp_Data\CityOfOleander.mdb\Property Data'
+fcClasses = []
+
+walk = arcpy.da.Walk(workspace,datatype='FeatureClass',type='Polygon')
+
+walk
+for dirpath, dirnames, filenames in walk:
+    for filename in filenames:
+        fcClasses.append(filename)
+        
+        
+a = 0
+for i in fcClasses:
+    a+=1
+    print(a,i)
