@@ -1,0 +1,15 @@
+#Developer Name : Sagar Chougule / 8148470091 / 92chougulesagar@gmail.com
+import arcpy
+
+a = 0
+
+nfile = open(r'D:\TmpGIS\Projection.txt','w')
+srfile = arcpy.ListSpatialReferences('*')
+
+for i in srfile:
+    a+=1
+    nfile.writelines('{0}  :  {1}'.format(a,i))
+    nfile.write('\n')
+    
+nfile.close()
+
