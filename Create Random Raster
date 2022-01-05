@@ -1,0 +1,10 @@
+import arcpy
+import numpy
+
+# Create a simple array from scratch using random values
+myArray = numpy.random.random_integers(0,100,2500)
+myArray.shape = (50,50)
+
+# Convert array to a geodatabase raster
+myRaster = arcpy.NumPyArrayToRaster(myArray,x_cell_size=1)
+myRaster.save("C:/output/fgdb.gdb/myRandomRaster")
