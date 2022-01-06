@@ -1,0 +1,3 @@
+import arcpy
+mxd = arcpy.mapping.MapDocument("C:/Project/Watersheds.mxd")
+arcpy.mapping.ExportToPDF(mxd, "C:/Project/Output/Watersheds.pdf")
