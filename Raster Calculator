@@ -1,0 +1,10 @@
+#Script Name: Raster Calculator
+#Developer Name: Sagar Chougule / 92chougulesagar@gmail.com
+#import module
+import arcpy
+from arcpy.sa import *
+f1raster = arcpy.Raster("C:/raster/factor1")
+f2raster = arcpy.Raster("C:/raster/factor2")
+f3raster = arcpy.Raster("C:/raster/factor3")
+outraster = (f1 + f2 + f3) / 3
+outraster.save("C:/raster/final")
