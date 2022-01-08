@@ -1,0 +1,20 @@
+#Use of Tool: To calculate Geometry
+#Date:08/02/2022
+#Developer Name: Sagar Chougule / 8148470091 / 92chougulesagar@gmail.com
+
+#import arcpy module
+import arcpy
+
+
+#data for geometry calculation
+data = r'D:\TmpGIS\shp_Data\Mango_Classification\Hogalagere_Classification.shp'
+
+
+
+geolist = arcpy.CopyFeatures_management(data,arcpy.Geometry())
+
+
+length = 0
+for gemetry in geolist:
+    length+=gemetry.length
+    print(length)
